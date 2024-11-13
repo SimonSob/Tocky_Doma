@@ -16,51 +16,57 @@ function getRandomZnak(zasobnik_znaku)
     return zasobnik_znaku[num];
 }
 
+var kliku = 0;
 var vyher = 0;
 function Roztoc()
 {
+    kliku++;
+    document.getElementById("kliku").textContent =  kliku;
+
+    let znaky = ["first", "second", "third", "fourth", "fifth"];
+
     let zasobnik_znaku = ["⭐","🍀","🌈","🌸","🍎"];
-    const refresh_rate1 = 100;
-    const refresh_rate2 = 200;
-    const refresh_rate3 = 300;
-
-
-    for(let i=0; i<20000; i++)
+    
+    for(let i =0;i<5; i++ )
     {
-        if(i % refresh_rate1 == 0)
-        {
-            document.getElementById("first").textContent = getRandomZnak(zasobnik_znaku);
-        }
+        document.getElementById(znaky[i]).textContent = getRandomZnak(zasobnik_znaku);
+        const vytoceno = [document.getElementById(znaky[i]).textContent];
 
-        if(i % refresh_rate2 == 0)
-        { 
-            document.getElementById("second").textContent = getRandomZnak(zasobnik_znaku);
-        }
+        let soucet = [hv, cl, da, ib, ja]
 
-        if(i % refresh_rate3 == 0)
+        var hv =0;
+        var cl = 0;
+        var da = 0;
+        var ib = 0;
+        var ja = 0;
+
+        console.log(vytoceno[i]);
+        console.log(i);
+
+        /*switch(vytoceno[i])
         {
+            case "⭐":
+                hv++;
+                break;
             
-            document.getElementById("third").textContent = getRandomZnak(zasobnik_znaku);
-        }
-        
+            case "🍀":
+                cl++;
+                break;
+
+            case "🌈":
+                da++;
+                break;
+
+            case "🌸":
+                ib++;
+                break;
+
+            case "🍎":
+                ja++;
+                break;
+                
+        }*/
     }
-
-
-    const first = document.getElementById("first").textContent;
-    const second = document.getElementById("second").textContent;
-    const third = document.getElementById("third").textContent;
-
-    if(first == second && second == third)
-    {
-        document.getElementById("vyhra").textContent = 'vyhráváš';
-        vyher = vyher + 1;
-        document.getElementById("pocet").textContent = 'výher:  ' + vyher;
-
-    }
-    else
-    {
-        console.log('toto funguje');
-        document.getElementById("vyhra").textContent = 'nevyhráváš';
-    }
+    
 
 }

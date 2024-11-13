@@ -1,0 +1,17 @@
+{
+    "name": "Open Weather Map - Temperature",
+    "short_name": "Weather",
+    "description": "Jednoduchy PWA - Open Weather Map Temperature",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "icons": 
+    [
+        {
+            "src": "icons8-cherry-100.png",
+            "sizes": "100x100",
+            "type": "image/png"
+        }
+        
+        
+    ]
+}

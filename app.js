@@ -26,46 +26,18 @@ function Roztoc()
     let znaky = ["first", "second", "third", "fourth", "fifth"];
 
     let zasobnik_znaku = ["⭐","🍀","🌈","🌸","🍎"];
+    let vytoceno = [];
     
     for(let i =0;i<5; i++ )
     {
         document.getElementById(znaky[i]).textContent = getRandomZnak(zasobnik_znaku);
-        const vytoceno = [document.getElementById(znaky[i]).textContent];
+        vytoceno[i] = document.getElementById(znaky[i]).textContent;
 
-        let soucet = [hv, cl, da, ib, ja]
+    }
 
-        var hv =0;
-        var cl = 0;
-        var da = 0;
-        var ib = 0;
-        var ja = 0;
-
+    for(let i =0;i<5;i++)
+    {
         console.log(vytoceno[i]);
-        console.log(i);
-
-        /*switch(vytoceno[i])
-        {
-            case "⭐":
-                hv++;
-                break;
-            
-            case "🍀":
-                cl++;
-                break;
-
-            case "🌈":
-                da++;
-                break;
-
-            case "🌸":
-                ib++;
-                break;
-
-            case "🍎":
-                ja++;
-                break;
-                
-        }*/
     }
     
 
